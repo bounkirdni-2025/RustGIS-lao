@@ -44,6 +44,7 @@ pub enum Script {
     Arabic,
     /// Bengali: an Indic script with a face discovered on the desktop where available.
     Bengali,
+    Lao,
 }
 
 /// Which CJK face reads best for a language (the glyph shapes differ by region).
@@ -110,7 +111,7 @@ pub static LANGUAGES: [LangInfo; 21] = [
     lang!("ja", "日本語", "Japanese", Script::Cjk(CjkFont::Japanese), "ja.tsv"),
     lang!("ko", "한국어", "Korean", Script::Cjk(CjkFont::Korean), "ko.tsv"),
     lang!("ka", "ქართული", "Georgian", Script::Alphabetic, "ka.tsv"),
-    lang!("lo", "ພາສາລາວ", "Lao", Script::Alphabetic, "lo.tsv"),
+    lang!("lo", "ພາສາລາວ", "Lao", Script::Lao, "lo.tsv"),
     lang!("bn", "বাংলা", "Bengali", Script::Bengali, "bn.tsv"),
     lang!("el", "Ελληνικά", "Greek", Script::Alphabetic, "el.tsv"),
 ];
