@@ -1,5 +1,5 @@
 # lo interface catalog: English<TAB>translation
- by 	 ໂດຍ 
+ by 	 ໂດຍ
 '{b}' isn't a bucket name	'{b}' ບໍ່ແມ່ນຊື່ bucket
 '{text}' isn't a scale: type one such as 1:12,345	'{text}' ບໍ່ແມ່ນມາດຕາສ່ວນ: ໃຫ້ພິມຄືແນວນີ້ 1:12,345
 (b4-b3)/(b4+b3)	(b4-b3)/(b4+b3)
@@ -2565,7 +2565,7 @@ PROJ definition	ຄຳນິຍາມ PROJ
 Project	ໂຄງການ
 Project\nPackage	ແພັກເກດ\nໂຄງການ
 Project Info	ຂໍ້ມູນໂຄງການ
-project is "sample", "blank", "last" or {"path": a project file}	project ຕ້ອງເປັນ "sample", "blank", "last" ຫຼື {"path": ໄຟລ໌ໂຄງການ}
+project is "sample", "blank", "last" or {"path": a project file}	project ຕ້ອງເປັນ "sample", "blank", "last" ຫຼື {"path": a project file}
 Project Raster	ສາຍແຜນທີ່ແຣັສເຕີໃໝ່
 Project Template	ແມ່ແບບໂຄງການ
 project's path is required	ຈຳເປັນຕ້ອງມີເສັ້ນທາງໄຟລ໌ໂຄງການ
