@@ -44,6 +44,7 @@ pub enum Script {
     Arabic,
     /// Bengali: an Indic script with a face discovered on the desktop where available.
     Bengali,
+    /// Lao: a face discovered on the desktop where available, after the interface font.
     Lao,
 }
 
