@@ -2671,6 +2671,9 @@ fn share_groups(app: &mut RustGisApp, ui: &mut Ui) {
                 menu_item(ui, app, "save_as", "Save As Report File…", "ui.saveItem", json!({"kind": "report"}));
                 menu_item(ui, app, "save_as", "Save As Report Template…", "ui.saveItem", json!({"kind": "reportTemplate"}));
             });
+        });
+        // A column holds three rows: Presentation and Export To 3D get one of their own.
+        col(ui, |ui| {
             small_menu(
                 ui,
                 app,
@@ -2682,15 +2685,16 @@ fn share_groups(app: &mut RustGisApp, ui: &mut Ui) {
                     menu_item(ui, app, "save_as", "Save As Presentation File…", "ui.saveItem", json!({"kind": "presentation"}));
                 },
             );
-            small(
+            small_menu(
                 ui,
                 app,
                 "export_layer",
                 "Export To 3D",
-                "Export the selected layer as a 3D model (OBJ), polygons extruded.",
-                "ui.saveItem",
-                json!({"kind": "obj"}),
-                false,
+                "Export the selected layer as a 3D model (OBJ or STL), polygons extruded.",
+                |ui, app| {
+                    menu_item(ui, app, "export_layer", "Wavefront OBJ…", "ui.saveItem", json!({"kind": "obj"}));
+                    menu_item(ui, app, "export_layer", "STL 3D Model…", "ui.saveItem", json!({"kind": "stl"}));
+                },
             );
         });
     });
@@ -3192,6 +3196,16 @@ fn layout_groups(app: &mut RustGisApp, ui: &mut Ui) {
         big(ui, app, "export", "Export", "Export the layout as PDF or PNG.", "ui.exportLayout", Value::Null, false, false);
         big(ui, app, "print", "Print", "Print the layout.", "ui.printLayout", Value::Null, false, false);
         col(ui, |ui| {
+            small(
+                ui,
+                app,
+                "copy",
+                "Capture To Clipboard",
+                "Copy an image of the layout to the clipboard.",
+                "ui.captureLayout",
+                Value::Null,
+                false,
+            );
             small(ui, app, "save_as", "Save Layout File", "Save the layout as a layout file.", "ui.saveLayout", Value::Null, false);
             small(ui, app, "map", "Show Map", "Close the layout and show the map.", "layout.close", Value::Null, false);
         });
